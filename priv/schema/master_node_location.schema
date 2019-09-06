@@ -1,0 +1,9 @@
+
+{mapping, "master_node_location", "rabbit.master_node_location",
+    [{datatype, atom}]}.
+
+{translation, "rabbit.master_node_location",
+fun(Conf) ->
+    Location = cuttlefish:conf_get("master_node_location", Conf),
+    list_to_atom(Location)
+end}.
