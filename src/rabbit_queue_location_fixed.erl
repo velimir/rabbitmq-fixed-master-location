@@ -2,7 +2,7 @@
 
 -behaviour(rabbit_queue_master_locator).
 
--include("rabbit.hrl").
+-include_lib("rabbit_common/include/rabbit.hrl").
 
 -export([description/0, queue_master_location/1]).
 
